@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: pshar10/django-app:latest
+    command: sh -c "until nc -z db 5432; do echo waiting for db; sleep 2; done && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DB_NAME=pranavsharma
+      - DB_USER=pranavsharma
+      - DB_PASSWORD=admin
+      - DB_HOST=db
+      - DB_PORT=5432
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: pranavsharma
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: pranavsharma
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

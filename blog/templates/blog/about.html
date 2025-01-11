@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    
+</head>
+<body>
+
+<header>
+    <h1>About me</h1>
+</header>
+
+<nav>
+    <a href="#leadership">Leadership & Achievements</a>
+    <a href="#skills">Other Skills</a>
+    <a href="#hobbies">Hobbies & Interests</a>
+    <a href="{% url 'blog-home' %}">Back</a>
+</nav>
+
+<section id="leadership">
+    <h2>Leadership Roles & Personal Experiences</h2>
+    <div class="card">
+        <h3>Leadership Achievements</h3>
+        <ul>
+            <li>Led a cross-functional team of 10 at Tata Consultancy Services, achieving 100% client satisfaction.</li>
+            <li>Recipient of the prestigious LIREL Honor Roll Award for leadership, integrity, and excellence.</li>
+            <li>Developed a mentorship program for junior colleagues, improving onboarding efficiency by 20%.</li>
+            <li>Co-led the publication of an internal knowledge-sharing newsletter on emerging technologies.</li>
+            <li>Spearheaded the planning and execution of Titiksha 2k16, increasing event sponsorships by 35%.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Other Skills</h2>
+    <div class="card">
+        <h3>Leadership in Sports</h3>
+        <p>As Captain of the under-19 cricket team during Higher Secondary, I led the team to victory in multiple regional tournaments, demonstrating my team-building and leadership skills on and off the field.</p>
+    </div>
+    <div class="card">
+        <h3>Creative Arts</h3>
+        <p>Passionate about music production and composition, I have created original tracks and collaborated with peers for live performances, showcasing my creativity and artistic expression.</p>
+    </div>
+    <div class="card">
+        <h3>Event Management</h3>
+        <p>Successfully hosted and organized several cultural and technical events, honing my public speaking, organizational, and multitasking skills.</p>
+    </div>
+    <div class="card">
+        <h3>Team Building</h3>
+        <p>Actively participated in inter-school debates and sports tournaments, fostering collaboration and nurturing teamwork among diverse groups.</p>
+    </div>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <div class="card">
+        <h3>Photography & Travel</h3>
+        <p>I have a deep passion for photography, capturing moments from my travels, and creating visually compelling content for personal projects. I enjoy discovering new cultures and landscapes through the lens of my camera.</p>
+    </div>
+</section>
+
+<footer>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/pranav1010">LinkedIn</a> | <a href="https://github.com/Pshar10">GitHub</a></p>
+    <p>&copy; 2025 Pranav Sharma</p>
+</footer>
+<script src="{% static 'blog/js/script.js' %}"></script>
+
+</body>
+</html>

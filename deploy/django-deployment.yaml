@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      initContainers:
+      - name: migrate-database
+        image: pshar10/django-app:latest
+        command: ["sh", "-c", "python manage.py migrate"]
+        env:
+        - name: DB_NAME
+          value: pranavsharma
+        - name: DB_USER
+          value: pranavsharma
+        - name: DB_PASSWORD
+          value: admin
+        - name: DB_HOST
+          value: postgres-service
+        - name: DB_PORT
+          value: "5432"
+      containers:
+      - name: django-app
+        image: pshar10/django-app:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_NAME
+          value: pranavsharma
+        - name: DB_USER
+          value: pranavsharma
+        - name: DB_PASSWORD
+          value: admin
+        - name: DB_HOST
+          value: postgres-service

@@ -1,0 +1,128 @@
+/* sub.css */
+
+/* General container styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.delete-column {
+    text-align: center;
+}
+
+/* Style for the delete button */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Pagination styling */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    /* Stack the table headers and make the content more readable on smaller screens */
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    table {
+        border: 0;
+    }
+
+    .delete-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .pagination a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce padding and font size on very small screens */
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .delete-btn {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .pagination a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

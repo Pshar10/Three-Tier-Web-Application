@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/ty.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thank you for your submission!</h1>
+
+        <div class="details">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Message:</strong> {{ message }}</p>
+        </div>
+
+        <a href="{% url 'blog-home' %}">Back to Home</a>
+    </div>
+</body>
+
+</html>

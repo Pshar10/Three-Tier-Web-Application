@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+    <title>Pranav Sharma - Resume</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="profile-container">
+            <img src="{% static 'blog/images/profile-pic.png' %}" alt="Profile Picture" class="profile-pic">
+        </div>
+        <h1>Pranav Sharma</h1>
+        <p>Media Technology Master's Graduate | Audio Engineer | Software Developer</p>
+        <p>Email: <a href="mailto:pshar416@gmail.com">pshar416@gmail.com</a> | Phone: +49 160 95483472</p>
+    </header>
+
+<nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#socials">Socials</a>
+    <a href="{% url 'blog-about' %}">Highlights</a>
+</nav>
+
+<section id="summary">
+    <h2>Summary</h2>
+    <p>Master's graduate in Media Technology with 3 years' experience in audio engineering and a strong software development background. Seeking to contribute to innovative technology projects.</p>
+</section>
+
+
+
+<section id="skills" >
+    <h2>Skills</h2>
+    <ul>
+        <li><strong>Programming Languages:</strong> Python, C++, Java, MATLAB</li>
+        <li><strong>Frameworks and Tools:</strong> PyTorch, Docker, Kubernetes, Jenkins, Ansible</li>
+        <li><strong>Databases:</strong> MySQL, MongoDB, DynamoDB</li>
+        <li><strong>Business Intelligence:</strong> Pandas (Data Analysis), AWS Developer</li>
+        <li><strong>Languages:</strong> English (Proficient), German (B1)</li>
+    </ul>
+</section>
+
+<section id="certifications" class="certifications fade-up">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Agile Working (November 2018)</li>
+        <li>Internet of Things (November 2018)</li>
+    </ul>
+</section>
+
+<section id="experience" class="experience fade-up">
+    <h2>Experience</h2>
+    
+    <div class="card">
+        <h3>Graduate Researcher - Fraunhofer IIS</h3>
+        <p><em>Jan 2022 - Sep 2024 | Erlangen, Germany</em></p>
+        <ul>
+            <li>Developed and deployed the CINGO spatial audio system in Unity 3D, enhancing the user experience in virtual environments by creating modular software for real-time spatial audio rendering.</li>
+            <li>Conducted a comparative analysis of loudspeaker and headphone recordings using sine sweep, analyzing Room Impulse Responses (RIRs) and correlating acoustic measures with perceptual audio quality.</li>
+            <li>Recorded loudspeaker/headphones using sweeps for multiple source-receiver configurations to improve and enhance the RIR dataset.</li>
+            <li>Designed Acoustic Visualization tools using Qt/C++, enabling room acoustics visualization and analysis of large datasets.</li>
+            <li>Enhanced Binaural Room Impulse Responses (BRIRs) and assessed innovative spatial audio plugins, optimizing data-driven audio systems for improved localization, timbre, and envelopment, which ties into automated data extraction and performance analysis.</li>
+            <li>Played a pivotal role in the Mobile Audio Rendering team, enhancing overall user experience in spatial audio using signal processing.</li>
+            <li>Executed MUSHRA tests to assess spatial audio perceptual effects with HRTF across diverse populations, achieving a 30% improvement in audio quality.</li>
+            <li>Designed and implemented an analysis framework for comparing various spatial binaural renderers, enabling comprehensive comparison and optimization of spatial audio tools.</li>
+            <li>Created a RIR similarity matching algorithm using unsupervised machine learning, automating the comparison of Frequency Domain Network (FDN)-based RIRs with real-world RIRs, improving system efficiency by streamlining data processing.</li>
+        </ul>
+    </div>
+
+    <div class="card fade-up">
+        <h3>Associate Engineer - Tata Consultancy Services</h3>
+        <p><em>Sep 2018 - Jun 2020 | Pune, India</em></p>
+        <ul>
+            <li>Designed and deployed a three-tier web application using Docker, Kubernetes, Jenkins, and AWS EC2, improving deployment efficiency by 40%.</li>
+            <li>Deployed a complete environment, including VPC, EC2 instances, RDS, and S3 buckets, with version-controlled templates.</li>
+            <li>Implemented a CI/CD pipeline using AWS CodePipeline and CodeBuild, automating the deployment of a serverless application with AWS Lambda and S3, reducing deployment time by 30%.</li>
+            <li>Maintained and optimized the Model Data Repository for offshore banking operations with the Bank of Montreal, ensuring high data integrity and performance.</li>
+            <li>Designed data models and implemented complex SQL queries for data extraction, reporting, and analytics, reducing query execution time by 20%.</li>
+            <li>Developed a RESTful API for managing database interactions, integrating DynamoDB for highly available data processing.</li>
+            <li>Standardized infrastructure deployment using AWS CDK and CloudFormation templates, reducing manual configuration errors by 80%.</li>
+            <li>Migrated on-premises MySQL and PostgreSQL databases to AWS RDS with minimal downtime using AWS Database Migration Service (DMS), improving database performance and reliability.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section id="projects" class="projects fade-up">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>AI-Based Decay Parameter Estimation</h3>
+        <p><em>Master's Thesis</em></p>
+        <p>Developed a novel DCNN model for estimating decay parameters directly from reverberant speech signals, achieving RMS errors of 2.9 to 6 dB for EDC loss and 0.08 to 0.21 seconds for reverberation time (RT) loss.</p>
+        <a href="https://github.com/Pshar10/Blind-Estimation-of-EDC-from-Live-Signals">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>AI/ML Pipeline</h3>
+        <p>Developed and deployed a fully automated machine learning pipeline, utilizing Elastic Beanstalk for serverless application deployment. Integrated AWS CodePipeline with GitHub for CI/CD, automating the deployment process and enabling seamless model training, evaluation, and deployment.</p>
+        <a href="https://github.com/Pshar10/AI-ML-pipeline">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>Real-Time Contour Detection</h3>
+        <p>Developed a two-tier web application for real-time contour detection and sensor control using Raspberry Pi and OpenCV. Deployed the system using AWS Elastic Beanstalk and Docker.</p>
+        <a href="https://github.com/Pshar10/Web_Application_Countour_Detection_Using_Raspberrypi_And_Sensor_Controls">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>Video Processing</h3>
+        <p>Created Python programs for channel segregation, quantization, DCT, kernel filters, object detection, and pickling for video processing tasks.</p>
+        <a href="https://github.com/Pshar10/SimpleVideoCodec">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>Context-Based Image Retrieval</h3>
+        <p>Implemented a system to retrieve images from a large database based on their visual content using machine learning techniques.</p>
+        <a href="https://github.com/Pshar10/Content_Based_Image_Retrieval">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>VR Game Development</h3>
+        <p>Developed an arm-swinging locomotion game using HTC Vive, enhancing VR user experience by reducing dizziness by 60% while playing games.</p>
+        <a href="https://github.com/Pshar10/VR_Game">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>Loudspeakers to Go</h3>
+        <p>Created a mobile virtual loudspeaker setup on headphones using the Binaural Room Impulse Response database and Intel RealSense depth camera with 3 DoF, enhancing the spatial audio experience on portable devices.</p>
+        <a href="https://github.com/Pshar10/Loudspeakers_2_GO">GitHub Link</a>
+    </div>
+    
+    <div class="card fade-up">
+        <h3>Audio Processing</h3>
+        <p>Developed Python programs for down/up sampling, filtering, quantization, low delay filter-banks, pitch/speed enhancement, DCT, MDCT, and QMF for advanced audio processing tasks.</p>
+        <a href="https://github.com/Pshar10/Audio_Video_Processing">GitHub Link</a>
+    </div>
+    
+</section>
+
+<section id="education" class="education fade-up">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>Master's in Media Technology</h3>
+        <p><em>TU Ilmenau, Germany | GPA: 1.3</em></p>
+        <p><strong>Relevant Courses:</strong> Advanced Digital Signal Processing, Deep Learning, AI, Audio/Video Coding</p>
+    </div>
+    <div class="card fade-up">
+        <h3>Bachelor's in Electronics and Communication</h3>
+        <p><em>SMVDU, Jammu, India</em></p>
+        <p><strong>Relevant Courses:</strong> Digital Electronics, Real-Time DSP, Signal Processing</p>
+    </div>
+</section>
+
+
+<!-- <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+    <form method="POST" action="/submit/">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+    
+        <button type="submit">Send Message</button>
+    </form>
+    
+</section> -->
+
+<div id="chat-bubble">
+    <button id="chat-button">💬</button>
+    <div id="chat-window" style="display: none;">
+        <div id="chat-header">
+            <span>Chat</span>
+            <button id="close-chat">X</button>
+        </div>
+        <div id="chat-body">
+            <p>Bot: Hi! What is your name?</p>
+        </div>
+        <form id="chat-form">
+            {% csrf_token %}
+            <input type="text" id="chat-input" placeholder="Type your message..." required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!-- Thought for the day section -->
+<section id="thought-for-the-day">
+    <h2>Thought for the Day</h2>
+    <p><em>{{ thought }}</em></p>
+</section>
+
+<footer id="socials">
+    <p>Connect with me on <a href="https://www.linkedin.com/in/pranav1010">LinkedIn</a> | <a href="https://github.com/Pshar10">GitHub</a></p>
+    <p>&copy; 2025 Pranav Sharma</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static 'blog/js/script.js' %}"></script>
+</body>
+</html>
